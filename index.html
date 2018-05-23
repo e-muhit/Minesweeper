@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MINESWEEPER</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>MINESWEEPER</h1>
+    </header>
+    <main>
+        <div class="info">
+            <div class="score">Win
+                <div class="win-score">0</div>
+            </div>
+            <div class="mine">Mine
+                <div class="mine-amount"></div>
+            </div>
+            <div class="score">Loss
+                <div class="loss-score">0</div>
+            </div>
+
+        </div>
+        <div class="modal">
+            <label for="column-row-amount">How many columns and rows do you want?</label>
+            <input type="number" id="column-row-amount" min="5" max="100" required>
+            <button type="button" id="b1">submit</button>
+        </div>
+        <div class="modal-mines">
+            <label for="mines-amount">How many mines do you want?</label>
+            <input type="number" id="mines-amount" min="10" max="5000" required>
+            <button type="button" id="b3">submit</button>
+        </div>
+        <div class="modal-loss"></div>
+        <div class="modal-win"></div>
+        
+        <section class="table"></section>
+    </main>
+    <footer>
+        <h2>Instructions</h2>
+        <p>
+            Select how many columns and rows you want to play with followed by the amount of mines you want. The amount of mines must
+            be at most half the amount of squares or it will automatically set them to half the amount of squares. Once you
+            select the amount of mines you want, the game will begin. Each square can contain a number or a mine. The number
+            tells you how many neighboring (diagonally and adjacent) squares contain a mine. if you click on a mine it is
+            gameover and the game will restart with one point being added to loss. You can options(alt) click on a square
+            to add a flag on where you think there is a mine. To win you have to on all the squares that are not mines.
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="js/main.js"></script>
+</body>
+
+</html>
